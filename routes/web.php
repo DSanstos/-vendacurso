@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  Illuminate\Support\Facades\Mail;
+use App\Mail\obrigadoNotification;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +24,8 @@ Route::get("teste/", function(){
     //$user = new App\Models\usuariosModel;
     //return $user->findOrFail(1);
 
-    return view("bootstrap.pagamento");
+    //return view("bootstrap.pagamento");
+    $dados = ["nome"=>"Daniels"];
+    $mail = new obrigadoNotification;
+    return $mail->with($dados);
 });

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use  App\Models\usuariosModel;
 use  App\Models\usuariosInfoModel;
+use  Illuminate\Support\Facades\Mail;
+use App\Mail\obrigadoNotification;
 
 class inscricaoController extends Controller
 {
@@ -18,6 +20,8 @@ class inscricaoController extends Controller
             } catch (\Throwable $th) {
                 $user = \DB::table("usuarios")->select("email")->where("email", "=", $usuario->email)->get()->toArray();
                 if ($user[0]->email != ''){
+                    $dados = ["nome"=>$usuario->nome];
+                    Mail::to($usuario->email)->send(new obrigadoNotification($dados));
                     return view("bootstrap.pagamento");
                 } else {
                     return redirect()->back();
@@ -32,7 +36,13 @@ class inscricaoController extends Controller
             $usuarioInfo->numero = $_POST["inputNumero"];
             $usuarioInfo->cep = str_replace('-', '', $_POST["inputCep"]);
             $usuarioInfo->bairro = $_POST["inputBairro"];
-            $usuarioInfo->save();
+            try {
+                $usuarioInfo->save();
+            } catch (\Throwable $th) {
+
+            }
+            
+            
         return view("bootstrap.pagamento");
     }
 }

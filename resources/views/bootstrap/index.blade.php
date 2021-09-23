@@ -7,11 +7,10 @@
       <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
         <h1 class="display-4 fw-bold lh-1">Venda Antecipada!!</h1>
         <p class="lead">Você é empreendedor ou quer ser um programador que consegue fazer uma aplicação do zero e extremamente rápido, utilizando as tecnologias mais utilizadas do mercado, essa é a sua chance!</p>
-        <p><strong>CURSO DE LARAVEL 8 + BOOTSTRAP 5 <code>para empreendedores</code></strong> é o curso que não foca na ferramenta,mas em sua aplicação, deixando os frameworks cuidarem dos detalhes técnicos. </p>
+        <p><strong>CURSO DE LARAVEL 8 + BOOTSTRAP 5 <code>para empreendedores</code></strong> é o curso que não foca na ferramenta, mas em sua aplicação, deixando os frameworks cuidarem dos detalhes técnicos. </p>
         <p>Impossivel não sair deste treinamento, <strong>totalmente inspirado</strong> a criar aplicações que vão ser utilizadas por centenas de pessoas</p>
         <div class="d-grid gap-2 d-md-flex justify-c ontent-md-start mb-4 mb-lg-3">
           <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" data-bs-toggle="modal" data-bs-target="#modalForm">Garantir vaga</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalVideo">Video explicativo</button>
         </div>
 
 <!-- Modal -->
@@ -69,7 +68,7 @@
         <div class="mb-3 row">
           <label for="staticEmail" class="col-sm-2 col-form-label">Local :</label>
           <div class="col-sm-3">
-            <input type="text" class="form-control" id="inputEstado" name="inputEstado" Placeholder="Estado" required>
+            <input type="text" class="form-control" id="inputEstado" name="inputEstado" Placeholder="Estado" required maxlength="2">
           </div>
           <div class="col-sm-7">
             <input type="text" class="form-control" id="inputCidade" name="inputCidade" Placeholder="Cidade" required>
@@ -139,7 +138,7 @@
     <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Brindes patrocinados!!</h2>
-          <p class="lead">Conseguimos uma série de brindes para os inscritos neste treinamento. A cada posição de sua inscrição, você leva um brinde. Conseguimos uma incrivel relação que pode ser conferida no <a href="#">link</a>, parece inacreditavel, mas há um motivo para isso. Somos <strong>empreendedores</strong> e sabemos como construir uma oferta irresistível. Possuimos o Maior <strong>Over Delivery</strong> da internet com mais de 100 prêmios importados</p>
+          <p class="lead">Conseguimos uma série de brindes para os inscritos neste treinamento. A cada posição de sua inscrição, você leva um brinde. Conseguimos uma incrivel relação  de itens, parece inacreditável, mas há um motivo para isso. Somos <strong>empreendedores</strong> e sabemos como construir uma oferta irresistível. Possuimos o Maior <strong>Over Delivery</strong> da internet com mais de 100 brindes importados</p>
           <h2 class="featurette-heading">Grupo de desconto</h2>
           <p class="lead">Além de tudo isso que já mensionamos, é possivel adquir este curso com um preço super expecial <a href="https://chat.whatsapp.com/GxyNwiIPJkF1oT4qQku2JH">aqui</a> neste grupo do Whatsapp.</p>
         </div>
