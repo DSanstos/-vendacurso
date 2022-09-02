@@ -16,7 +16,7 @@ use App\Mail\obrigadoNotification;
 */
 
 Route::get('/', function () {
-    return view('bootstrap.index');
+    return view('cover.index');
 });
 Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 

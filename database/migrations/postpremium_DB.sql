@@ -26,10 +26,9 @@ create table usuarios_info(
 	foreign key(usuario) references usuarios(id)
 )engine=innodb charset=utf8;
 
-create table brindes(
-	id bigint auto_increment,
-	nomeBrinde varchar(250),
-	quantidade int,
-	primary key(id)
+create table vagasCurso(
+	id int auto_increment primary key,
+	inscrito bigint,
+	foreign key(inscrito) references (usuarios_info)
 )engine=innodb charset=utf8;
 
