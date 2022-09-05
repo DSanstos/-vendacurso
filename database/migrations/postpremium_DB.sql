@@ -64,5 +64,3 @@ create procedure addLink (strLink text, strIdent varchar(30))
 		insert into link (link, ident) values (strLink, strIdent);
 	end //
 delimiter ;
-
-https://userede.com.br/pagamentos/pt/bkjd8461

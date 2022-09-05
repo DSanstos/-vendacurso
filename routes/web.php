@@ -18,6 +18,12 @@ use App\Mail\obrigadoNotification;
 Route::get('/', function () {
     return view('cover.index');
 });
+Route::get('beneficios', function () {
+    return view('cheatsheet.index');
+});
+Route::get('reserva', function () {
+    return view('cheatsheet.index');
+});
 Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 
 Route::get("teste/", function(){
