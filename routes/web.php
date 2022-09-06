@@ -22,7 +22,7 @@ Route::get('beneficios', function () {
     return view('cheatsheet.index');
 });
 Route::get('reserva', function () {
-    return view('cheatsheet.index');
+    return view('bootstrap.inscricao');
 });
 Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 

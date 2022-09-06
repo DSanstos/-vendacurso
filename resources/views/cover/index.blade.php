@@ -79,8 +79,9 @@ $sitename = "Laravel FullStack";
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>Inscritos<span class="spinner-grow badge bg-success">New</span>Reservas<span class="badge bg-danger">New</span>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
-          <a class="nav-link fw-bold py-1 px-0 active" href="reserva">Reservar Vaga</a>
+       <!-- <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
+          <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
+       -->
       </nav>
     </div>
   </header>
@@ -99,6 +100,34 @@ $sitename = "Laravel FullStack";
     <p>Para acompanhar os bastidores siga <a href="https://www.instagram.com/danielshoganmkt/" class="text-white">@danielshoganmkt</a></p>
   </footer>
 </div>
+<!-- modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reserva de Vagas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="input" method="post">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><kbd>Email address</kbd></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- model -->
+
+
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" ></script>    
