@@ -77,9 +77,11 @@ $sitename = "Laravel FullStack";
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">{{$sitename}}</h3>Inscritos<span class="spinner-grow badge bg-success">New</span>Reservas<span class="badge bg-danger">New</span>
+      <h3 class="float-md-start mb-0">{{$sitename}}</h3>
+      <!-- 
+        Inscritos<span class="spinner-grow badge bg-success">New</span>Reservas<span class="badge bg-danger">New</span>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-       <!-- <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
+       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
        -->
       </nav>
