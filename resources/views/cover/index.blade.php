@@ -78,12 +78,12 @@ $sitename = "Laravel FullStack";
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>
-      <!-- 
+
         Inscritos<span class="spinner-grow badge bg-success">New</span>Reservas<span class="badge bg-danger">New</span>
       <nav class="nav nav-masthead justify-content-center float-md-end">
        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
-       -->
+
       </nav>
     </div>
   </header>
@@ -113,16 +113,25 @@ $sitename = "Laravel FullStack";
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="input" method="post">
+        @csrf
         <div class="modal-body">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"><kbd>Email address</kbd></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label"><kbd>Email:</kbd></label>
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
           </div>
         </div>
-      </form>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><kbd>Nome p/ Certificado:</kbd></label>
+            <input type="text" class="form-control" name="nome" aria-describedby="emailHelp">
+          </div>
+        </div>  
+      
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="reset" class="btn btn-primary" value="Limpar">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+        <input  type="submit" class="btn btn-success" value="Reservar">
+      </form>
       </div>
     </div>
   </div>

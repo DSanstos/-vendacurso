@@ -24,6 +24,9 @@ Route::get('beneficios', function () {
 Route::get('reserva', function () {
     return view('bootstrap.inscricao');
 });
+Route::post('input', function () {
+    print_r($_POST);
+});
 Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 
 Route::get("teste/", function(){
