@@ -1,7 +1,7 @@
 @php
 $sitename = "Laravel FullStack";
-use App\Models\usuariosModel;
-$reservas = usuariosModel::count();
+//use App\Models\usuariosModel;
+//$reservas = usuariosModel::count();
 @endphp
 <!doctype html>
 <html lang="en" class="h-100">
