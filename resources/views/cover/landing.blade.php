@@ -1,5 +1,7 @@
 @php
 $sitename = "Laravel FullStack";
+use App\Models\usuariosModel;
+$reservas = usuariosModel::count();
 @endphp
 <!doctype html>
 <html lang="en" class="h-100">
@@ -78,12 +80,15 @@ $sitename = "Laravel FullStack";
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>
-
-        Inscritos<span class="spinner-grow badge bg-success">New</span>Reservas<span class="badge bg-danger">New</span>
+      <!--
+        Inscritos<span class="spinner-grow badge bg-success">New</span>
+          @if($reservas != 0)
+          Reservas<span class="badge bg-danger">{{$reservas}}</span>
+          @endif
       <nav class="nav nav-masthead justify-content-center float-md-end">
        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
-
+      -->
       </nav>
     </div>
   </header>
@@ -109,7 +114,7 @@ $sitename = "Laravel FullStack";
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Reserva de Vagas</h5>
+        <h5 class="modal-title text-dark" >Reserva de Vagas</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="input" method="post">
@@ -117,13 +122,13 @@ $sitename = "Laravel FullStack";
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"><kbd>Email:</kbd></label>
-            <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+            <input type="email" class="form-control" name="email" required>
           </div>
         </div>
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"><kbd>Nome p/ Certificado:</kbd></label>
-            <input type="text" class="form-control" name="nome" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="nome" required>
           </div>
         </div>  
       

@@ -16,7 +16,7 @@ use App\Mail\obrigadoNotification;
 */
 
 Route::get('/', function () {
-    return view('cover.index');
+    return view('cover.landing');
 });
 Route::get('beneficios', function () {
     return view('cheatsheet.index');
@@ -24,10 +24,8 @@ Route::get('beneficios', function () {
 Route::get('reserva', function () {
     return view('bootstrap.inscricao');
 });
-Route::post('input', function () {
-    print_r($_POST);
-});
-Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
+Route::post('input', [App\Http\Controllers\InputController::class, "inscrever"]);
+//Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 
 Route::get("teste/", function(){
     //$user = new App\Models\usuariosModel;
@@ -37,4 +35,10 @@ Route::get("teste/", function(){
     $dados = ["nome"=>"Daniels"];
     $mail = new obrigadoNotification;
     return $mail->with($dados);
+});
+Route::get('testeok', function () {
+    return view('bootstrap.obrigado');
+});
+Route::get("ativacao/{link}", function($link){
+    return str_replace('"', "", $link);
 });

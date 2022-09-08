@@ -11,7 +11,7 @@ class usuariosModel extends Model
 
     public $table = "usuarios";
     public $timestamps = false;
-    public $fillable = ["email", "nome"];
+    public $fillable = ["email", "nome", "passwd_snh"];
 
     public function usuarios_info()
     {
