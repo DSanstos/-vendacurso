@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\usuariosModel;
+use App\Models\usuariosInfoModel;
+use App\Models\LinksPagModel;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
@@ -23,15 +25,19 @@ class InputController extends Controller
                 "nome.required"=> "Por favor digite um com mais de 2 letras"
             ]);
             $usuarios = new usuariosModel;
+            $usuariosinfo = new usuariosInfoModel;
+            $link = LinksPagModel::where("pago", false)->first();
             try {
-                $usuarios->Create([
-                    "email" => ltrim($request->input("email")),
-                    "nome" => ltrim($request->input("nome")),
-                    "passwd_snh" => base64_encode(md5(sha1($request->input("email")
-                    .$request->input("nome")
-                    ) ) )
-                ]);
-                mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
+                    $usuarios->email = ltrim($request->input("email"));
+                    $usuarios->nome  = ltrim($request->input("nome"));
+                    $usuarios->passwd_snh  = base64_encode(md5(sha1($request->input("email")
+                    .$request->input("nome"))));
+                    $usuarios->save();
+                    $usuariosinfo->usuario = $usuarios->id;
+                    $usuariosinfo->save();
+                    $link->aluno = $usuarios->id;
+                    $link->save();
+                    mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
             } catch (\Throwable $th) {
                 Log::info($th->getMessage());
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
