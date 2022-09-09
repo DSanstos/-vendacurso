@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class LinksPagModel extends Model
 {
     use HasFactory;
-    public $table = "linkspagamento";
+    public $table = "linksPagamento";
     public $fillable = ["link", "aluno"];
     public $timestamps = false;
 }
