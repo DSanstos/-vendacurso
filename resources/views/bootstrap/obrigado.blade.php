@@ -13,7 +13,7 @@
         <h1 class="display-4 fw-normal">Parabéns</h1>
         <p class="fs-5 text-muted">
             Você está a poucos passos de começar a mudar a sua vida tornando-se um programador fullstack em Laravel.
-            Disponibilizamos 2 formas de pagamento, no cartão em 12x ou Pix, com super desconto, no CNPJ da Kingkernel.  
+            Disponibilizamos 2 formas de pagamento, no cartão em 12x ou Pix, com super desconto de R$ 400, no CNPJ da Kingkernel.  
         </p>
       </div>
     </header>
