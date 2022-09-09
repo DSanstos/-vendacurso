@@ -41,7 +41,8 @@ Route::get('testeok', function () {
 });
 Route::get("ativacao/{link}", function($link){
     $hash = str_replace(['"', '[', ']', '"%5B"', '%5B"'], "", $link);
-    $quant = App\Models\usuariosModel::where("passwd_snh", $hash)->count();
+    $quant = App\Models\usuariosModel::where("passwd_snh", $hash)
+    ->where("active", false)->count();
     if($quant!= 0)
         {
             try {
