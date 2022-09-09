@@ -80,7 +80,7 @@ $reservas = usuariosModel::count();
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>
-        Inscritos<span class="spinner-grow badge bg-success">New</span>
+        <!-- Inscritos<span class="spinner-grow badge bg-success">New</span> -->
           @if($reservas != 0)
           Reservas<span class="badge bg-danger">{{$reservas}}</span>
           @endif
