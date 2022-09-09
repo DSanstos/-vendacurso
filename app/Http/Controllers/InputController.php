@@ -59,7 +59,11 @@ class InputController extends Controller
             ->update([
                 "passwd_snh" => Crypt::encryptString($request->input("confirm0"))
             ]);
-            return "pode fazer login";    
+            Log::info("O usuario :"
+            . $request->input("mailuser")
+            . "escolheu a senha :" 
+            . $request->input("confirm0"));
+            return view("bootstrap.finalizado");
         };
     }
 }

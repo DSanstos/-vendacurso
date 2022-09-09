@@ -37,10 +37,10 @@ Route::get("teste/", function(){
     return $mail->with($dados);
 });
 Route::get('testeok', function () {
-    return view('bootstrap.obrigado');
+    return view("bootstrap.finalizado");
 });
 Route::get("ativacao/{link}", function($link){
-    $hash = str_replace(['"', '[', ']'], "", $link);
+    $hash = str_replace(['"', '[', ']', '"%5B"', '%5B"'], "", $link);
     $quant = App\Models\usuariosModel::where("passwd_snh", $hash)->count();
     if($quant!= 0)
         {
