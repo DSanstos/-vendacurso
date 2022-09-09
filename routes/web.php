@@ -61,4 +61,4 @@ Route::get("ativacao/{link}", function($link){
 Route::get("login", function(){
     return view("bootstrap.login");
 });
-Route::post("auth", [App\Http\Controllers\InputController::class, "UpdatePassword"]);
+Route::post("uppass", [App\Http\Controllers\InputController::class, "UpdatePassword"]);

@@ -41,8 +41,12 @@ class InputController extends Controller
             } catch (\Throwable $th) {
                 Log::info($th->getMessage());
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
-            }     
-            return view("bootstrap.obrigado");
+            }
+            $dados = [
+                "usuario" => $usuarios->id,
+                "linkId" => $link->link
+            ];
+            return view("bootstrap.obrigado")->with($dados);
         }
     public function UpdatePassword (Request $request)
     {
@@ -54,7 +58,8 @@ class InputController extends Controller
             usuariosModel::where("email", $request->input("mailuser"))
             ->update([
                 "passwd_snh" => Crypt::encryptString($request->input("confirm0"))
-            ]);    
+            ]);
+            return "pode fazer login";    
         };
     }
 }

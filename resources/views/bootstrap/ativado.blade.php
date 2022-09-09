@@ -5,7 +5,7 @@
       <p class="col-md-8 fs-4">Agora você pode atualizar as informações de seu perfil, para 
         escolher a forma de pagamento e garantir sua vaga no curso Laravel Fullstack.</p>
         <div class="row">
-            <form method="POST" action="/auth" onsubmit="valida()">
+            <form method="POST" action="/uppass"  onsubmit="return false;" id="uppass">
                 @csrf
                 <input type="hidden" name="mailuser" value="{{$dados["email"]}}">
             <div class="row g-3 align-items-center">
@@ -20,24 +20,25 @@
                 </div>
                   <div class="col-auto">
                     <span class="form-text">
-                      <input type="submit" class="btn btn-primary" id="upBtn" value="Atualizar">
+                      <input type="submit" class="btn btn-primary" onclick="valida();" value="Atualizar">
                     </span>
                   </div>
               </div>
             </form>
         </div>
-      <a class="btn btn-primary btn-lg" href="/login">login</a>
     </div>
 </div>
 @section("footerpage")
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
 <script type="text/javascript">
-  function valida (){
-    pass1 = $("#confirm0").val();
-    pass2 = $("#confirm1").val();
+  function valida(){
+    var pass1 = $("#confirm0").val();
+    var pass2 = $("#confirm1").val();
     if(pass1 != pass2){
       alert("as senhas não são iguais!");
       return false;
+    } else {
+      document.getElementById("uppass").submit();
     };
   };
 </script>
