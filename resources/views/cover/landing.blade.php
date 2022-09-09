@@ -1,7 +1,7 @@
 @php
 $sitename = "Laravel FullStack";
-//use App\Models\usuariosModel;
-//$reservas = usuariosModel::count();
+use App\Models\usuariosModel;
+$reservas = usuariosModel::count();
 @endphp
 <!doctype html>
 <html lang="en" class="h-100">
@@ -80,16 +80,13 @@ $sitename = "Laravel FullStack";
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>
-      <!--
-     
         Inscritos<span class="spinner-grow badge bg-success">New</span>
-          @if("reservas" != 0)
-          Reservas<span class="badge bg-danger">{{"reservas"}}</span>
+          @if($reservas != 0)
+          Reservas<span class="badge bg-danger">{{$reservas}}</span>
           @endif
       <nav class="nav nav-masthead justify-content-center float-md-end">
        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
-      -->
       </nav>
     </div>
   </header>

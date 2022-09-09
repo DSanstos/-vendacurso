@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ObrigadoMail;
+use Illuminate\Support\Facades\Crypt;
 
 class InputController extends Controller
 {
@@ -30,12 +31,24 @@ class InputController extends Controller
                     .$request->input("nome")
                     ) ) )
                 ]);
-
                 mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
             } catch (\Throwable $th) {
                 Log::info($th->getMessage());
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
             }     
             return view("bootstrap.obrigado");
-        }  
+        }
+    public function UpdatePassword (Request $request)
+    {
+        $request->validate([
+            "confirm0"=> "required",
+            "confirm1"=> "required",
+        ]);
+        if($request->input("confirm0") == $request->input("confirm1")){
+            usuariosModel::where("email", $request->input("mailuser"))
+            ->update([
+                "passwd_snh" => Crypt::encryptString($request->input("confirm0"))
+            ]);    
+        };
+    }
 }

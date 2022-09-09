@@ -40,5 +40,25 @@ Route::get('testeok', function () {
     return view('bootstrap.obrigado');
 });
 Route::get("ativacao/{link}", function($link){
-    return str_replace('"', "", $link);
+    $hash = str_replace(['"', '[', ']'], "", $link);
+    $quant = App\Models\usuariosModel::where("passwd_snh", $hash)->count();
+    if($quant!= 0)
+        {
+            try {
+                App\Models\usuariosModel::where("passwd_snh", $hash)
+                ->where("active", 0)->update(
+                    ["active"=>1]
+                );
+            } catch (\Throwable $th) {
+                return "email já ativado";
+            };
+            $objPessoa = App\Models\usuariosModel::where("passwd_snh", $hash)->get()->toArray();
+            return view("bootstrap.ativado")->with(["dados"=>$objPessoa[0]]);
+        };
+    return "Email já ativado";
+    
 });
+Route::get("login", function(){
+    return view("bootstrap.login");
+});
+Route::post("auth", [App\Http\Controllers\InputController::class, "UpdatePassword"]);
