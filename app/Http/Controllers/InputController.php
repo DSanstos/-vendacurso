@@ -26,7 +26,7 @@ class InputController extends Controller
             ]);
             $usuarios = new usuariosModel;
             $usuariosinfo = new usuariosInfoModel;
-            $link = LinksPagModel::where("pago", false)->first();
+            $link = LinksPagModel::where("aluno", null)->first();
             try {
                     $usuarios->email = ltrim($request->input("email"));
                     $usuarios->nome  = ltrim($request->input("nome"));
