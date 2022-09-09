@@ -1,6 +1,5 @@
 @extends('bootstrap.model')
-@php
-$linkId = "#";    
+@php 
 @endphp
 <div class="container py-3">
     <header>
