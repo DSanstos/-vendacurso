@@ -2,8 +2,8 @@
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">Cadastro ativado!</h1>
-      <p class="col-md-8 fs-4">Agora você pode atualizar as informações de seu perfil, para 
-        escolher a forma de pagamento e garantir sua vaga no curso Laravel Fullstack.</p>
+      <p class="col-md-8 fs-4">Agora você pode escolher uma senha para colocarmos no ambiente EAD
+         e garantir sua vaga no curso Laravel Fullstack.</p>
         <div class="row">
             <form method="POST" action="/uppass"  onsubmit="return false;" id="uppass">
                 @csrf
