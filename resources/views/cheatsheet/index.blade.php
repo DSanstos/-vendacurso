@@ -66,7 +66,7 @@
     <!-- Custom styles for this template -->
     <link href="cheatsheet/cheatsheet.css" rel="stylesheet">
   </head>
-  <body class="bg-light">
+  <body class="">
     
 <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
   <div class="container-fluid d-flex align-items-center">
@@ -75,40 +75,6 @@
     </h1>
   </div>
 </header>
-<aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
-  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Nesta página</h2>
-  <nav class="small" id="toc">
-    <ul class="list-unstyled">
-      <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Benefícios</button>
-        <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#baixacurva">Baixa curva de aprendizado</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tecnologia">Tecnologia Atualizada </a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tables">Salarios</a></li>
-        </ul>
-      </li>
-      <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Metodologia</button>
-        <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Overview</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#disabled-forms">Disabled forms</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#sizing">Sizing</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#input-group">Input group</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#floating-labels">Floating labels</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#validation">Validation</a></li>
-        </ul>
-      </li>
-      <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Recursos</button>
-        <ul class="list-unstyled ps-3 collapse" id="components-collapse">
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#accordion">Accordion</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#alerts">Alerts</a></li>
-          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#badge">Badge</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</aside>
 
 <div class="bd-cheatsheet container-fluid bg-body">
   <section id="content">
@@ -165,13 +131,41 @@
         </div></div>
         <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
           </div></div>
-
+      </div>
+    </article>
+    <article class="my-3" id="salario">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Metodologia Startup</h3>
+      </div>
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <p class="display-6">Metodologia Startup</p>
+        <p >A metodologia Startup simula o mais real possivel, o ambienete de desenvolvimento, colondo os alunos 
+          a trabalharem em equipe, sendo cada um responsavel por seu servidor. Responsável por manter o bom funcionamento 
+          e atualização do mesmo. Será liberado acesso SSH a uma servidor em nuvem, onde ocorerá as tarefas de atualização e 
+          correção de bugs. Nenhuma empresa no Mundno Brasileira utiliza esta metodologia.<br/>
+          Ambiente EAD, com instrutor 3x na semana, material e recursos extras na plataforma e assuntos periféricos 
+          mas vitais no aprendizado como:
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Composer</li>
+            <li class="list-group-item">Docker</li>
+            <li class="list-group-item">Bootstrap</li>
+            <li class="list-group-item">Jquery / Jquery-Ui</li>
+            <li class="list-group-item">GIt</li>
+            <li class="list-group-item">GIt Flow</li>
+            <li class="list-group-item">GitHub</li>
+            <li class="list-group-item">Ferramentas de API</li>
+          </ul>
+        </p>
+        </div></div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+          </div></div>
       </div>
     </article>
   </section>
 </div> 
 <div class="container">
-  @include("bootstrap.footer")
+  
 </div>
 
     <script src="cheatsheet/assets/dist/js/bootstrap.bundle.min.js"></script>
