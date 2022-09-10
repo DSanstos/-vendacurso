@@ -46,7 +46,8 @@ if($inscritos > 90){
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando saláriosde até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores Sêniors. 
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
-        <p>Preço de Lançamento R$ 1.300 em até 12x</p>
+        <p>Preço de Lançamento <b>R$ 1.300</b> em até 12x</p>
+        <p>Ou <br><b>R$ 900</b> à vista com desconto.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
         <a class="btn btn-warning" href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6">Grupo de informações e Venda</a>
