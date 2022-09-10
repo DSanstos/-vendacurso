@@ -19,6 +19,7 @@ $inscritos = LinksPagModel::where("pago", true)->count();
 
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/superhero/bootstrap.min.css" integrity="sha512-pCTSMcZZ+tTaq3FXSWGhMmO/OZ+52FqEdhlExLz8PTBQKMyqxAdav13kofJWiyI5zeieBo8tZ++SMZ2ZgueRBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -101,7 +102,7 @@ $inscritos = LinksPagModel::where("pago", true)->count();
       Serão turmas online com profissional de Mercado, atuante em empresas multi-nacionais.
     </p>
     <p class="lead">
-      <a href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6" class="btn btn-lg btn-secondary fw-bold border-white bg-white">grupo Informações</a>
+      <a href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6" class="btn btn-lg btn-secondary fw-bold border-white bg-white">grupo de Informações</a>
     </p>
   </main>
 
