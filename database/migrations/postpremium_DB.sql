@@ -86,3 +86,9 @@ insert into linksPagamento (link) values
 ("https://userede.com.br/pagamentos/pt/ns21s4c2"),
 ("https://userede.com.br/pagamentos/pt/or1q7ar3"),
 ("https://userede.com.br/pagamentos/pt/hd5gb52h");
+insert into linksPagamento (link) values 
+("https://userede.com.br/pagamentos/pt/pk1im03p"),
+("https://userede.com.br/pagamentos/pt/pk1im03p"),
+("https://userede.com.br/pagamentos/pt/lk2p4bei"),
+("https://userede.com.br/pagamentos/pt/kk39aian"),
+("https://userede.com.br/pagamentos/pt/os1q7icl");
