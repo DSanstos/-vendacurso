@@ -44,7 +44,7 @@ if($inscritos > 90){
     <img class="d-block mx-auto mb-4" src="icon.png" alt="" height="150">
     <h1 class="display-5 fw-bold">Laravel Fullstack</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando saláriosde até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores Sêniors. 
+      <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando salários de até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores Sêniors. 
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
         <p>Preço de Lançamento <b>R$ 1.300</b> em até 12x</p>
         <p>Ou <br><b>R$ 900</b> à vista com desconto.</p>
