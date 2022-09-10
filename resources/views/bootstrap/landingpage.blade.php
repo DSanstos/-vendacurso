@@ -28,7 +28,7 @@ if($inscritos > 90){
       <ul class="nav nav-pills">
         @if($inscritos != 0)
         <li class="nav-item"><a href="#" class="nav-link" aria-current="page">
-            Inscritos - <span class="badge text-bg-{{$classBadge}}">{{$inscritos}}</span></a></li>
+            Inscritos - <span class="badge text-bg-{{$classBadge}}">{{$inscritos}}</span> de 100</a></li>
         @endif
         @if($reservas != 0)
         <li class="nav-item"><a href="#" class="nav-link" aria-current="page">
