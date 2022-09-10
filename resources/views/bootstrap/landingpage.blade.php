@@ -1,21 +1,44 @@
+@php
+$sitename = "Laravel FullStack";
+use App\Models\usuariosModel;
+use App\Models\LinksPagModel;
+$reservas = usuariosModel::count();
+$inscritos = LinksPagModel::where("pago", true)->count();
+//$inscritos = 1; //remover ou comentar
+if($inscritos > 90){
+        $classBadge = "danger";
+    } else {
+        $classBadge = "success";
+    };
+@endphp
 @extends('bootstrap.model')
 @section('headpage')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+
+</style>
 @endsection
-<header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0"></h3>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4 text-white">{{$sitename}}</span>
+      </a>
 
-          Inscritos<span class="badge bg-success"></span>
-
-          Reservas<span class="badge bg-danger"></span>
-
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
-          <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
-      </nav>
-    </div>
-  </header>
+      <ul class="nav nav-pills">
+        @if($inscritos != 0)
+        <li class="nav-item"><a href="#" class="nav-link" aria-current="page">
+            Inscritos - <span class="badge text-bg-{{$classBadge}}">{{$inscritos}}</span></a></li>
+        @endif
+        @if($reservas != 0)
+        <li class="nav-item"><a href="#" class="nav-link" aria-current="page">
+            Reservas - <span class="badge text-bg-danger">{{$reservas}}</span></a></li>
+        @endif
+        <li class="nav-item"><a href="/beneficios" class="nav-link">Benefícios</a></li>
+        <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link">Reservar Vaga</a></li>
+      </ul>
+    </header>
+  </div>
 
 <div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4" src="icon.png" alt="" height="75">
@@ -25,7 +48,7 @@
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
-        <button type="button" class="btn btn-warning">Grupo de informações e Venda</button>
+        <a class="btn btn-warning" href="#">Grupo de informações e Venda</a>
       </div>
     </div>
   </div>
@@ -67,36 +90,25 @@
           <p>Parcelanos o pagamento em até 12x, em diversas bandeiras</p>
         </div>
       </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading.</p>
-        </div>
-      </div>
-    </div>
   </div>
+<!-- 
+  <div class="row text text-center">
+    <div class="col-lg-6">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+      <h2 class="fw-normal">Heading</h2>
+      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div>
+    <div class="col-lg-6">
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+      <h2 class="fw-normal">Heading</h2>
+      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div>
+-->
+  @include("bootstrap.footer")
 
   <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

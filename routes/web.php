@@ -16,7 +16,7 @@ use App\Mail\obrigadoNotification;
 */
 
 Route::get('/', function () {
-    return view('cover.landing');
+    return view('bootstrap.landingpage');
 });
 Route::get('beneficios', function () {
     return view('cheatsheet.index');

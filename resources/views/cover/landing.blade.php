@@ -15,7 +15,7 @@ $inscritos = LinksPagModel::where("pago", true)->count();
     <meta name="generator" content="Hugo 0.101.0">
     <title>{{$sitename}}</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+    <link rel="canonical" href="https://laravelfullstack.com.br">
 
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" >
