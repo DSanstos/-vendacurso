@@ -101,7 +101,7 @@ $inscritos = LinksPagModel::where("pago", true)->count();
       Serão turmas online com profissional de Mercado, atuante em empresas multi-nacionais.
     </p>
     <p class="lead">
-      <a href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6" class="btn btn-lg btn-secondary fw-bold border-white bg-white">grupo de esquenta</a>
+      <a href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6" class="btn btn-lg btn-secondary fw-bold border-white bg-white">grupo Informações</a>
     </p>
   </main>
 
