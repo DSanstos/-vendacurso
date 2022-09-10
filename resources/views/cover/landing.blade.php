@@ -1,7 +1,9 @@
 @php
 $sitename = "Laravel FullStack";
 use App\Models\usuariosModel;
+use App\Models\LinksPagModel;
 $reservas = usuariosModel::count();
+$inscritos = LinksPagModel::where("pago", true)->count();
 @endphp
 <!doctype html>
 <html lang="en" class="h-100">
@@ -80,7 +82,9 @@ $reservas = usuariosModel::count();
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">{{$sitename}}</h3>
-        <!-- Inscritos<span class="spinner-grow badge bg-success">New</span> -->
+          @if ($inscritos != 0)
+          Inscritos<span class="badge bg-success">{{$inscritos}}</span>
+          @endif
           @if($reservas != 0)
           Reservas<span class="badge bg-danger">{{$reservas}}</span>
           @endif

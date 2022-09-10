@@ -25,17 +25,7 @@ Route::get('reserva', function () {
     return view('bootstrap.inscricao');
 });
 Route::post('input', [App\Http\Controllers\InputController::class, "inscrever"]);
-//Route::post("inscricao/", "App\Http\Controllers\inscricaoController@inscrever");
 
-Route::get("teste/", function(){
-    //$user = new App\Models\usuariosModel;
-    //return $user->findOrFail(1);
-
-    //return view("bootstrap.pagamento");
-    $dados = ["nome"=>"Daniels"];
-    $mail = new obrigadoNotification;
-    return $mail->with($dados);
-});
 Route::get('testeok', function () {
     return view("bootstrap.finalizado");
 });
