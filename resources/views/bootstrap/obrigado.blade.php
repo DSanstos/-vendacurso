@@ -5,7 +5,7 @@
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <span class="fs-4">Laravel Fullstack</span>
+          <span class="fs-4 text-white">Laravel Fullstack</span>
         </a>
       </div>
   
