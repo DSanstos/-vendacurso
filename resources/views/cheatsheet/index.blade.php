@@ -10,7 +10,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cheatsheet/">
 <link href="cheatsheet/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;

@@ -53,3 +53,7 @@ Route::get("login", function(){
     return view("bootstrap.login");
 });
 Route::post("uppass", [App\Http\Controllers\InputController::class, "UpdatePassword"]);
+
+Route::get("new", function(){
+    return view("bootstrap.landingpage");
+});
