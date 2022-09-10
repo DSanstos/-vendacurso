@@ -44,8 +44,9 @@ if($inscritos > 90){
     <img class="d-block mx-auto mb-4" src="icon.png" alt="" height="75">
     <h1 class="display-5 fw-bold">Laravel Fullstack</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando saláriosde até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores sêniors. 
+      <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando saláriosde até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores Sêniors. 
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
+        <p>Preço de Lançamento R$ 1.300 em até 12x</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
         <a class="btn btn-warning" href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6">Grupo de informações e Venda</a>
@@ -62,7 +63,7 @@ if($inscritos > 90){
         <img src="cloud1.png" alt="cloud" height="100px">
         <div>
           <h3 class="fw-bold mb-0 fs-4">Servidor por Aluno</h3>
-          <p>Seu cursinho só te mostra videos e você não tem acesso a recurso de verdade? Oferecemos 
+          <p class="bd-callout bd-callout-warning">Seu cursinho só te mostra videos e você não tem acesso a recurso de verdade? Oferecemos 
             a real experiência de subir e gerenciar sua aplicação.</p>
         </div>
       </div>
@@ -91,23 +92,23 @@ if($inscritos > 90){
         </div>
       </div>
   </div>
-<!-- 
+
   <div class="row text text-center">
     <div class="col-lg-6">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      <img src="disaster.png" height="80">
 
-      <h2 class="fw-normal">Heading</h2>
-      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      <h2 class="fw-normal">Ambientes</h2>
+      <p>Você aprenderá a criar ambientes de homologação e produção, e levantar rapidamente em caso de desastres.</p>
+      <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
     </div>
     <div class="col-lg-6">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h2 class="fw-normal">Heading</h2>
-      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        <img src="company.png" height="80">
+      <h2 class="fw-normal">Treinamento Empresarial</h2>
+      <p >Nossa mentoria é focada em ensinar os processos que ocorem dentro do ambiente corporativo, como Guia de Funções, 
+        paths, GitFlow e comunicação Empresarial.</p>
+      <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
     </div>
--->
+
   @include("bootstrap.footer")
 
   <!-- Modal -->
