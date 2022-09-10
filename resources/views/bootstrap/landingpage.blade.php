@@ -48,7 +48,7 @@ if($inscritos > 90){
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
-        <a class="btn btn-warning" href="#">Grupo de informações e Venda</a>
+        <a class="btn btn-warning" href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6">Grupo de informações e Venda</a>
       </div>
     </div>
   </div>
