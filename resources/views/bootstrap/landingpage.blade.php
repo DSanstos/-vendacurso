@@ -2,15 +2,30 @@
 @section('headpage')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
+<header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0"></h3>
+
+          Inscritos<span class="badge bg-success"></span>
+
+          Reservas<span class="badge bg-danger"></span>
+
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="beneficios">Benefícios</a>
+          <a class="nav-link fw-bold py-1 px-0 active" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar Vaga</a>
+      </nav>
+    </div>
+  </header>
 
 <div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="display-5 fw-bold">Centered hero</h1>
+    <h1 class="display-5 fw-bold">Laravel Fullstack</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando saláriosde até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores sêniors. 
+        Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+        <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
+        <button type="button" class="btn btn-warning">Grupo de informações e Venda</button>
       </div>
     </div>
   </div>
@@ -82,3 +97,37 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" >Reserva de Vagas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="input" method="post">
+          @csrf
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><kbd>Email:</kbd></label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><kbd>Nome p/ Certificado:</kbd></label>
+              <input type="text" class="form-control" name="nome" required>
+            </div>
+          </div>  
+        
+        <div class="modal-footer">
+          <input type="reset" class="btn btn-primary" value="Limpar">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+          <input  type="submit" class="btn btn-success" value="Reservar">
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->

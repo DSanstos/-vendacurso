@@ -144,7 +144,7 @@ $inscritos = LinksPagModel::where("pago", true)->count();
     </div>
   </div>
 </div>
-<!-- model -->
+<!-- modal -->
 
 
 
