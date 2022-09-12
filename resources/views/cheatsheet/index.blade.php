@@ -80,11 +80,11 @@
     <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Beneficios da Stack</h2>
     <article class="my-3" id="baixacurva">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>baixa Curca de Aprendizado</h3>
+        <h3>Baixa curva de Aprendizado</h3>
       </div>
       <div>
         <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-        <p class="display-6">Baixa curva de aprendixado.</p>
+        <p class="display-6">Baixa curva de aprendizado.</p>
         <p >O Laravel simplificou muitos dos processos, de programação, chegando a fazer parecer que existe mágica.
            Pense mais na lógica de seu negócio e menos na complexidade do código. já no primeiro dia de estudos, ja é possivel subir
             uma página, ou até mesmo uma aplicação feita por outra pessoa.
@@ -139,10 +139,10 @@
       <div>
         <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
         <p class="display-6">Metodologia Startup</p>
-        <p >A metodologia Startup simula o mais real possivel, o ambienete de desenvolvimento, colondo os alunos 
+        <p >A metodologia Startup simula o mais real possivel, o ambienete de desenvolvimento, colocando os alunos 
           a trabalharem em equipe, sendo cada um responsavel por seu servidor. Responsável por manter o bom funcionamento 
           e atualização do mesmo. Será liberado acesso SSH a uma servidor em nuvem, onde ocorerá as tarefas de atualização e 
-          correção de bugs. Nenhuma empresa no Mundno Brasileira utiliza esta metodologia.<br/>
+          correção de bugs. Nenhuma empresa no Mundo Brasileira utiliza esta metodologia.<br/>
           Ambiente EAD, com instrutor 3x na semana, material e recursos extras na plataforma e assuntos periféricos 
           mas vitais no aprendizado como:
           <ul class="list-group list-group-flush">
