@@ -70,4 +70,8 @@ class InputController extends Controller
             return view("bootstrap.finalizado");
         };
     }
+    public function loginckeck(Request $request)
+        {
+            return $request->all();
+        }
 }

@@ -25,6 +25,7 @@ Route::get('reserva', function () {
     return view('bootstrap.inscricao');
 });
 Route::post('input', [App\Http\Controllers\InputController::class, "inscrever"]);
+Route::post('auth', [App\Http\Controllers\InputController::class, "loginckeck"]);
 
 Route::get('testeok', function () {
     return view("bootstrap.finalizado");
