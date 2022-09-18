@@ -33,19 +33,23 @@ class InputController extends Controller
                     $usuarios->passwd_snh  = base64_encode(md5(sha1($request->input("email")
                     .$request->input("nome"))));
                     $usuarios->save();
+                    Log::info("salvo o usuario: ".$request->input("nome"));
+                    Log::info("email : ".$request->input("email"));
                     $usuariosinfo->usuario = $usuarios->id;
                     $usuariosinfo->save();
+                    Log::info("usuario ".$request->input("email"). " Atribuido a tabela de informações com id: ".$usuarios->id);
                     $link->aluno = $usuarios->id;
                     $link->save();
+                    Log::info("link de pagamento atribuido a ".$request->input("email"));
                     mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
             } catch (\Throwable $th) {
-                Log::info($th->getMessage());
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
             }
             $dados = [
                 "usuario" => $usuarios->id,
                 "linkId" => $link->link
             ];
+
             return view("bootstrap.obrigado")->with($dados);
         }
     public function UpdatePassword (Request $request)
