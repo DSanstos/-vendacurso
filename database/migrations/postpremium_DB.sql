@@ -49,7 +49,7 @@ create procedure addUsuario (
 	end //
 delimiter ;
 
-create table linksPagamento(
+create table linkspagamento(
 	id int auto_increment primary key,
 	link text,
 	ident varchar(30) unique,
@@ -64,7 +64,7 @@ create procedure addLink (strLink text, strIdent varchar(30))
 		insert into linksPagamento (link, ident) values (strLink, strIdent);
 	end //
 delimiter ;
-insert into linksPagamento (link) values 
+insert into linkspagamento (link) values 
 ("https://userede.com.br/pagamentos/pt/bkjecgj8"),
 ("https://userede.com.br/pagamentos/pt/oq1q6k4f"),
 ("https://userede.com.br/pagamentos/pt/gk6k0gpg"),
@@ -75,7 +75,7 @@ insert into linksPagamento (link) values
 ("https://userede.com.br/pagamentos/pt/esa2ajc9"),
 ("https://userede.com.br/pagamentos/pt/gk6k0h06"),
 ("https://userede.com.br/pagamentos/pt/aw152ei3h");
-insert into linksPagamento (link) values 
+insert into linkspagamento (link) values 
 ("https://userede.com.br/pagamentos/pt/dhcbcd0h"),
 ("https://userede.com.br/pagamentos/pt/je3qm9f4"),
 ("https://userede.com.br/pagamentos/pt/cnfdb0je"),
@@ -86,7 +86,7 @@ insert into linksPagamento (link) values
 ("https://userede.com.br/pagamentos/pt/ns21s4c2"),
 ("https://userede.com.br/pagamentos/pt/or1q7ar3"),
 ("https://userede.com.br/pagamentos/pt/hd5gb52h");
-insert into linksPagamento (link) values 
+insert into linkspagamento (link) values 
 ("https://userede.com.br/pagamentos/pt/pk1im03p"),
 ("https://userede.com.br/pagamentos/pt/pk1im03p"),
 ("https://userede.com.br/pagamentos/pt/lk2p4bei"),
