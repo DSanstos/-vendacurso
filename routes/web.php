@@ -16,7 +16,15 @@ use App\Mail\obrigadoNotification;
 */
 
 Route::get('/', function () {
-    return view('bootstrap.landingpage');
+    print_r($_SESSION["usermail"]);
+    exit;
+    if(isset($_SESSION["usermail"]))
+        {
+            return "session iniciada";
+        } else {
+            return view('bootstrap.landingpage');
+        }
+    
 });
 Route::get('beneficios', function () {
     return view('cheatsheet.index');

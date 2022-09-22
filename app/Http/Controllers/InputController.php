@@ -42,6 +42,7 @@ class InputController extends Controller
                     $link->save();
                     Log::info("link de pagamento atribuido a ".$request->input("email"));
                     mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
+                    Log::info("email de ativação enviado para :".$request->input("email"));
             } catch (\Throwable $th) {
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
             }
@@ -53,25 +54,39 @@ class InputController extends Controller
             return view("bootstrap.obrigado")->with($dados);
         }
     public function UpdatePassword (Request $request)
-    {
-        $request->validate([
-            "confirm0"=> "required",
-            "confirm1"=> "required",
-        ]);
-        if($request->input("confirm0") == $request->input("confirm1")){
-            usuariosModel::where("email", $request->input("mailuser"))
-            ->update([
-                "passwd_snh" => Crypt::encryptString($request->input("confirm0"))
+        {
+            $request->validate([
+                "confirm0"=> "required",
+                "confirm1"=> "required",
             ]);
-            Log::info("O usuario :"
-            . $request->input("mailuser")
-            . "escolheu a senha :" 
-            . $request->input("confirm0"));
-            return view("bootstrap.finalizado");
-        };
-    }
+            if($request->input("confirm0") == $request->input("confirm1")){
+                usuariosModel::where("email", $request->input("mailuser"))
+                ->update([
+                    "passwd_snh" => encrypPassBr($request->input("confirm0"))
+                ]);
+                Log::info("O usuario :"
+                . $request->input("mailuser")
+                . " escolheu a senha :" 
+                . $request->input("confirm0"));
+                return view("bootstrap.finalizado");
+            };
+        }
     public function loginckeck(Request $request)
         {
-            return $request->all();
+            $StrEmail = ltrim($request->input("email"));
+            $strPsswd = encrypPassBr(ltrim($request->input("passsnh")));
+            $intExiste = usuariosModel::select(\DB::RAW("count(*) as existe"))->where("email", $StrEmail)
+            ->where("passwd_snh", $strPsswd)->where("active", true)->pluck("existe")[0];
+            if ( $intExiste == 1)
+                {
+                    echo  "pode logar";
+                    $_SESSION["usermail"]=$StrEmail;
+                    return redirect("/");
+
+                } else {
+                    echo "não loga";
+                };
+
+            //"email":"daniel.santos.ap@gmail.com","passsnh":"1234"
         }
 }

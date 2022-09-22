@@ -92,3 +92,4 @@ insert into linkspagamento (link) values
 ("https://userede.com.br/pagamentos/pt/lk2p4bei"),
 ("https://userede.com.br/pagamentos/pt/kk39aian"),
 ("https://userede.com.br/pagamentos/pt/os1q7icl");
+-- https://cielolink.com.br/3DTJIUb
