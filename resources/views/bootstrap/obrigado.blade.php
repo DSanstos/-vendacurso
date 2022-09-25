@@ -31,7 +31,9 @@
                 <li>até 12x de R$ <span class="text-success">108,33</span></li>
                 <li>Rede Card</li>
               </ul>
-              <a href="{{$linkId}}" class="w-100 btn btn-lg btn-success">Link de pagamento</a>
+              <!-- <a href="{{$linkId}}" class="w-100 btn btn-lg btn-success">Link de pagamento</a> -->
+              <form method='post' action='https://cieloecommerce.cielo.com.br/transactionalvnext/order/buynow' target='blank'><input type='hidden' name='id' value='c8d97b3d-af3d-4834-8d61-0a9d663681d0' /><input type='image' name='submit' alt='Comprar' src='https://cieloecommerce.cielo.com.br/backoffice/Content/img/buttons/button-5-1.png' /></form>
+              
             </div>
           </div>
         </div>

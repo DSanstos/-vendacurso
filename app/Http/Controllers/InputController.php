@@ -44,6 +44,7 @@ class InputController extends Controller
                     mail::to($request->input("email"))->send(new ObrigadoMail($request->input("email")));
                     Log::info("email de ativação enviado para :".$request->input("email"));
             } catch (\Throwable $th) {
+                Log::info("Não foi possivel enviar e-mail para: ".$request->input("email"));
                 return Redirect::back()->with('error', 'Talvez seu e-mail já esteja cadastrado');
             }
             $dados = [

@@ -16,8 +16,6 @@ use App\Mail\obrigadoNotification;
 */
 
 Route::get('/', function () {
-    print_r($_SESSION["usermail"]);
-    exit;
     if(isset($_SESSION["usermail"]))
         {
             return "session iniciada";
@@ -65,4 +63,7 @@ Route::post("uppass", [App\Http\Controllers\InputController::class, "UpdatePassw
 
 Route::get("new", function(){
     return view("bootstrap.landingpage");
+});
+Route::get("teste", function(){
+    return view("bootstrap.obrigado")->with(["linkId"=>"#"]);
 });
