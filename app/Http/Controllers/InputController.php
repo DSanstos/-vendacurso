@@ -83,7 +83,6 @@ class InputController extends Controller
                     echo  "pode logar";
                     $_SESSION["usermail"]=$StrEmail;
                     return redirect("/");
-
                 } else {
                     echo "não loga";
                 };
