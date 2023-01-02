@@ -15,7 +15,13 @@ if($inscritos > 90){
 @section('headpage')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style type="text/css">
-
+body { 
+  background: url(fundo.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 </style>
 @endsection
 @if(isset($error))
@@ -49,11 +55,11 @@ if($inscritos > 90){
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">O Framework de desenvolvimento mais robusto e procurado do mercado, pagando salários de até <b>R$ 20.000 </b><i>(vinte mil)</i> / mês, para desenvolvedores Sêniors. 
         Somos a única empresa de ensino e fábrica de software que coloca os alunos dentro de experiências reais, com todos os recursos que vão se deparar no mercado.</p>
-        <p>Preço de Lançamento <b>R$ 1.300</b> em até 12x</p>
+        <p>Preço de Lançamento <b>R$ 1.400</b> em até 12x</p>
         <p>Ou <br><b>R$ 900</b> à vista com desconto.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <a class="btn btn-success btn-lg px-4 gap-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Quero fazer parte!</a>
-        <a class="btn btn-warning" href="https://chat.whatsapp.com/EoPWqg7NOPEAMQUvKg3lV6">Grupo de informações e Venda</a>
+        <a class="btn btn-warning" href="https://chat.whatsapp.com/LmMX0nm4osH4s0kZpNpWg7">Grupo de informações e Venda</a>
       </div>
     </div>
   </div>
