@@ -1,6 +1,11 @@
+@php
+use Carbon\Carbon;
+$today = Carbon::parse(date('Y-m-d'));
+$endate = carbon::parse('2023-01-07');
+@endphp
 @extends('bootstrap.model')
 @section("headpage")
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.1/spacelab/bootstrap.min.css" integrity="sha512-jr3aR8haaVI36jsvU37p2Pp8LeP4Rva1UoKfqtVsLQc1ifPsKTASXlMU13lItrlHsvFIqn2p8F0OpJoYr6xVFg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 @section("bodypage")
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -12,13 +17,13 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home
-              <span class="visually-hidden">(current)</span>
-            </a>
+            <a class="nav-link active" href="/">Home</a>
           </li>
+          @if($endate->greaterThan($today))
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Promoção</a>
           </li>
+          @endif
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
@@ -41,7 +46,7 @@
               Ações
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Sair</a></li>
+              <li><a class="dropdown-item" href="/logout">Sair</a></li>
               <li><a class="dropdown-item" href="#">Ambiente EAD</a></li>
             </ul>
           </div>
@@ -49,40 +54,36 @@
     </div>
   </nav>
   <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Columns with icons</h2>
+    <h2 class="pb-2 border-bottom">Formas de Pagamento - Condições normais</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+          <i class="fa fa-credit-card fa-2x"></i>
         </div>
-        <h3 class="fs-2">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Call to action
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-        </a>
+        <h3 class="fs-2">Pagar no Cartão</h3>
+        <p class="pb-2"><b>R$ 1.400</b> em 12x de <span class="text text-danger">R$ 116,67</span></p>
+        <p><form method='post' action='https://cieloecommerce.cielo.com.br/transactionalvnext/order/buynow' target='blank'><input type='hidden' name='id' value='284c19d8-5d9d-4a92-a774-ed97e6b3d51e' /><input type='image' name='submit' alt='Comprar' src='https://cieloecommerce.cielo.com.br/backoffice/Content/img/buttons/button-5-1.png' /></form></p>
       </div>
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+          <img src="logo-pix-png-icone-520x520.png" height="60">
         </div>
-        <h3 class="fs-2">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Call to action
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-        </a>
+        <h3 class="fs-2">Pagar com PIX</h3>
+        <p>Pagamento à vista R$ 900</p>
+        <img src="qr-900.jpeg" height="250">
+        <p>CNPJ: <a href="" class="icon-link d-inline-flex align-items-center">
+          <span>44.198.847/0001-06</span>
+        </a></p>
       </div>
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+          <i class="fa fa-wpforms fa-2x"></i>
         </div>
-        <h3 class="fs-2">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="icon-link d-inline-flex align-items-center">
-          Call to action
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-        </a>
+        <h3 class="fs-2">Boleto</h3>
+        <p>R$ 1.000 em 5x R$ 200</p>
+        <form action="boleto" method="post">
+          <input class="form-control" type="text" name="b_cpf" placeholder="CPF" aria-label="default input example">
+        </form>
       </div>
     </div>
   </div>
@@ -91,7 +92,7 @@
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
         <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
       </a>
-      <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+      <span class="mb-3 mb-md-0 text-muted">© {{date("Y");}} Company, Inc</span>
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

@@ -13,7 +13,7 @@
         <h1 class="display-4 fw-normal">Parabéns</h1>
         <p class="fs-5 text-muted">
             Enviamos um link de ativação ao seu e-mail. Você está a poucos passos de começar a mudar a sua vida tornando-se um programador fullstack em Laravel.
-            Disponibilizamos 2 formas de pagamento, no cartão em 12x ou Pix, com super desconto de R$ 400, no CNPJ da Kingkernel.  
+            Disponibilizamos 2 formas de pagamento, no cartão em 12x ou Pix, com super desconto de R$ 500, no CNPJ da Kingkernel.  
         </p>
       </div>
     </header>
@@ -26,13 +26,13 @@
               <h4 class="my-0 fw-normal">Cartão em até 12x</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">R$ 1.300</h1>
+              <h1 class="card-title pricing-card-title">R$ 1.400</h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>até 12x de R$ <span class="text-success">108,33</span></li>
-                <li>Rede Card</li>
+                <li>até 12x de R$ <span class="text-success">116,67</span></li>
+                <li>Rede Cielo</li>
               </ul>
               <!-- <a href="{{$linkId}}" class="w-100 btn btn-lg btn-success">Link de pagamento</a> -->
-              <form method='post' action='https://cieloecommerce.cielo.com.br/transactionalvnext/order/buynow' target='blank'><input type='hidden' name='id' value='c8d97b3d-af3d-4834-8d61-0a9d663681d0' /><input type='image' name='submit' alt='Comprar' src='https://cieloecommerce.cielo.com.br/backoffice/Content/img/buttons/button-5-1.png' /></form>
+              <form method='post' action='https://cieloecommerce.cielo.com.br/transactionalvnext/order/buynow' target='blank'><input type='hidden' name='id' value='284c19d8-5d9d-4a92-a774-ed97e6b3d51e' /><input type='image' name='submit' alt='Comprar' src='https://cieloecommerce.cielo.com.br/backoffice/Content/img/buttons/button-5-1.png' /></form>
               
             </div>
           </div>
@@ -45,7 +45,7 @@
             <div class="card-body">
               <h1 class="card-title pricing-card-title">R$ 900</h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>PIX CNPJ: <span class="text-primary">44.198.847/0001-06</span></li>
+                <li>PIX CNPJ: <span class="text-primary cnpj" id="copy">44.198.847/0001-06</span></li>
                 <img src="qr-900.jpeg" class="img-fluid">
                 <li>Será preciso enviar o comprovante</li>
                 <a href="https://wa.me/5511953610234" class="w-100 btn btn-lg btn-primary">Enviar</a>
@@ -56,3 +56,16 @@
       </div>  
     </main>
 </div>
+@section('footerpage')
+<script>
+  let btn = document.querySelector('#copy');
+
+  btn.addEventListener('click', function(e) {
+
+    let textArea = document.querySelector('.cnpj');
+    document.execCommand('copy');
+    alert("PIX copiado: " + textArea.innerHTML);
+  
+});
+</script>
+@endsection

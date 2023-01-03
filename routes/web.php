@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use  Illuminate\Support\Facades\Mail;
 use App\Mail\obrigadoNotification;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +15,19 @@ use App\Mail\obrigadoNotification;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     if(isset($_SESSION["usermail"]))
         {
             return view("bootstrap.logued");
         } else {
-            return view('bootstrap.landingpage');
+            //return view('bootstrap.landingpage');
+            return view('bootstrap.landing2');
         }
     
+});
+Route::get('logout', function(){
+    unset($_SESSION["usermail"]);
+    return redirect('/');
 });
 Route::get('beneficios', function () {
     return view('cheatsheet.index');
@@ -66,4 +71,9 @@ Route::get("new", function(){
 });
 Route::get("teste", function(){
     return view("bootstrap.obrigado")->with(["linkId"=>"#"]);
+});
+Route::get("tokenbb", function(){
+    //$bb = new App\Http\Controllers\BancoController;
+    //return $bb->getToken();
+    return view("bootstrap.logued");
 });

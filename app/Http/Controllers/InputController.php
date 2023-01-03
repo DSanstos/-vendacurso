@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ObrigadoMail;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 
 class InputController extends Controller
 {
@@ -76,7 +77,7 @@ class InputController extends Controller
         {
             $StrEmail = ltrim($request->input("email"));
             $strPsswd = encrypPassBr(ltrim($request->input("passsnh")));
-            $intExiste = usuariosModel::select(\DB::RAW("count(*) as existe"))->where("email", $StrEmail)
+            $intExiste = usuariosModel::select(DB::RAW("count(*) as existe"))->where("email", $StrEmail)
             ->where("passwd_snh", $strPsswd)->where("active", true)->pluck("existe")[0];
             if ( $intExiste == 1)
                 {
@@ -84,9 +85,7 @@ class InputController extends Controller
                     $_SESSION["usermail"]=$StrEmail;
                     return redirect("/");
                 } else {
-                    echo "não loga";
+                    return redirect("/");
                 };
-
-            //"email":"daniel.santos.ap@gmail.com","passsnh":"1234"
         }
 }
