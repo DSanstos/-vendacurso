@@ -9,6 +9,7 @@ use App\Models\LinksPagModel;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Mail\Message;
 use App\Mail\ObrigadoMail;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -86,5 +87,27 @@ class InputController extends Controller
                 } else {
                     return redirect("/");
                 };
+        
+        }
+    public function boleto(Request $request)
+        {
+            $request->validate([
+                "b_cpf"=> "required"
+                ]);
+            $cpf = $request->input("b_cpf");
+            try {
+                usuariosModel::where('email', $_SESSION["usermail"])->update(["cpf"=>$cpf]);
+                $usuario = usuariosModel::where('email', $_SESSION["usermail"])->get()[0];
+                $message = "$usuario->nome, com CPF: $cpf, solicitou a criação de boletos.";
+                Mail::raw($message, function (Message $message) {
+                $message->to($_SESSION["usermail"])
+                    ->subject("Solicitação de Boleto")
+                    ->from(env("MAIL_FROM_ADDRESS"));
+            });
+            } catch (\Throwable $th) {
+                echo "entre em contato com a administração, houve algum erro."; 
+            };
+            
+            return $usuario;
         }
 }

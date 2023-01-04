@@ -21,6 +21,7 @@ class UsuariosTable extends Migration
             active boolean default false,
             passwd_snh text,
             mostrar enum("email", "nome"),
+            cpf varchar(20),
             primary key(id)
         )engine=innodb charset=utf8;';
         \DB::select($sql);

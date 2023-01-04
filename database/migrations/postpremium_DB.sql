@@ -10,6 +10,7 @@ create table usuarios(
 	active boolean default false,
 	passwd_snh text,
 	mostrar enum("email", "nome"),
+	cpf varchar(15),
 	primary key(id)
 )engine=innodb charset=utf8;
 

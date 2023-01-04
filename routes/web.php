@@ -36,6 +36,7 @@ Route::get('reserva', function () {
 });
 Route::post('input', [App\Http\Controllers\InputController::class, "inscrever"]);
 Route::post('auth', [App\Http\Controllers\InputController::class, "loginckeck"]);
+Route::post("boleto", [App\Http\Controllers\InputController::class, "boleto"]);
 
 Route::get('testeok', function () {
     return view("bootstrap.finalizado");

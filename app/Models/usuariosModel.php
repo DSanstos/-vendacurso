@@ -11,11 +11,10 @@ class usuariosModel extends Model
 
     public $table = "usuarios";
     public $timestamps = false;
-    public $fillable = ["email", "nome", "passwd_snh"];
+    public $fillable = ["email", "nome", "passwd_snh", "cpf"];
 
     public function usuarios_info()
     {
-        //return $this->hasOne(usuariosinfoModel::class, "usuario");
         return $this;
     }
 
