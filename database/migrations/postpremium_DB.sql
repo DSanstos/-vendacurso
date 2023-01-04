@@ -49,7 +49,7 @@ create procedure addUsuario (
 	end //
 delimiter ;
 
-create table linkspagamento(
+create table linksPagamento(
 	id int auto_increment primary key,
 	link text,
 	ident varchar(30) unique,
@@ -64,6 +64,15 @@ create procedure addLink (strLink text, strIdent varchar(30))
 		insert into linksPagamento (link, ident) values (strLink, strIdent);
 	end //
 delimiter ;
+delimiter //
+create procedure delid(arg_id int)
+	begin
+		delete from linksPagamento where aluno=arg_id;
+		delete from usuarios_info where usuario=arg_id;
+		delete from usuarios where id=arg_id;
+	end //
+delimiter ;
+
 insert into linkspagamento (link) values 
 ("https://userede.com.br/pagamentos/pt/bkjecgj8"),
 ("https://userede.com.br/pagamentos/pt/oq1q6k4f"),
