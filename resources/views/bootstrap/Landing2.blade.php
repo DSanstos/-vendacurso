@@ -17,12 +17,13 @@ if($inscritos > 40){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content=Aprenda com os Mestres do Laravel>
-    <meta property="og:site_name" content=Laravel FullStack>
-    <meta property="og:url" content=https://laravelfullstack.com.br>
-    <meta property="og:description" content=Única turma de mestres Larevel de 2023. Não perca a chance de aprender com os melhores profissionais treinados no Vale do Silicio no melhor Framework PHP>
-    <meta property="og:type" content="">
-    <meta property="og:image" content=https://curso.laravelfullstack.com.br/mestre_laravel.jpg>
+    <meta property="og:url" content="https://curso.laravelfullstack.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aprenda Com os Mestres">
+    <meta property="og:description" content="Única turma que haverá em 2023. Não perca essa chance de transforma-se também num ninja em Laravel">
+    <meta property="og:image" itemprop="image" content="https://curso.laravelfullstack.com.br/mestre_laravel.jpg" tal:attributes="content string:https://curso.laravelfullstack.com.br/mestre_laravel.jpg"  tal:condition="context/getImage|nothing" >
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="600">
     <title>{{$sitename}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/spacelab/bootstrap.min.css" integrity="sha512-kb6aHe8Fchic05HVLuEio/LWsmwtNRndUxZ5AqK4IyMG817Dhff2BxuKJCRPWzQ4daCxN5TagQ5s8Hpo9YJgbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
