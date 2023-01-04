@@ -1,7 +1,7 @@
 @php
 use Carbon\Carbon;
 $today = Carbon::parse(date('Y-m-d'));
-$endate = carbon::parse('2023-01-07');
+$endate = carbon::parse('2023-01-02');
 @endphp
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,22 +32,6 @@ $endate = carbon::parse('2023-01-07');
             <a class="nav-link" href="#">Promoção</a>
           </li>
           @endif
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
         </ul>
           <div class="btn-group dropstart">
             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
