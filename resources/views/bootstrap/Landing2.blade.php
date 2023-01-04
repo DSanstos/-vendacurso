@@ -5,7 +5,7 @@ use App\Models\LinksPagModel;
 $reservas = usuariosModel::count();
 $inscritos = LinksPagModel::where("pago", true)->count();
 //$inscritos = 1; //remover ou comentar
-if($inscritos > 90){
+if($inscritos > 40){
         $classBadge = "danger";
     } else {
         $classBadge = "success";
@@ -56,7 +56,7 @@ if($inscritos > 90){
                 <li>
                   <a href="#" class="nav-link text-white text-center" data-bs-toggle="modal" data-bs-target="#reservaModal">
                     <span class="fa fa-cart-plus fa-3x"></span><br/>
-                    Reservar
+                    Comprar
                   </a>
                 </li>
               </ul>
@@ -88,18 +88,16 @@ if($inscritos > 90){
                 <p>Preço de Lançamento <b>R$ 1.400</b> em até 12x</p>
                 <p>Ou <br><b>R$ 900</b> à vista com desconto.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-success btn-lg px-4 me-md-2">Comprar</button>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#reservaModal" class="btn btn-success btn-lg px-4 me-md-2" >Comprar</a>
             </div>
           </div>
         </div>
       </div>
-
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
           <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
           </a>
-          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+          <span class="mb-3 mb-md-0 text-muted">© {{date("Y")}} Kingkernel.</span>
         </div>
     
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
