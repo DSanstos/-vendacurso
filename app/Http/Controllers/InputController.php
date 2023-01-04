@@ -103,11 +103,11 @@ class InputController extends Controller
                 $message->to($_SESSION["usermail"])
                     ->subject("Solicitação de Boleto")
                     ->from(env("MAIL_FROM_ADDRESS"));
-            });
-            } catch (\Throwable $th) {
-                echo "entre em contato com a administração, houve algum erro."; 
-            };
+                });
+                } catch (\Throwable $th) {
+                    echo "entre em contato com a administração, houve algum erro."; 
+                };
             
-            return $usuario;
+            return Redirect::back()->with('msg', 'Recebemos sua Solicitação para Boleto.');
         }
 }

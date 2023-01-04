@@ -1,4 +1,5 @@
 @php
+use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
 $today = Carbon::parse(date('Y-m-d'));
 $endate = carbon::parse('2023-01-02');
@@ -45,6 +46,11 @@ $endate = carbon::parse('2023-01-02');
       </div>
     </div>
   </nav>
+  @if(\Session::get('msg'))
+  <div class="alert alert-success" role="alert">
+    {{\Session::get('msg')}}
+  </div>
+  @endif
   <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Formas de Pagamento - Condições normais</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
