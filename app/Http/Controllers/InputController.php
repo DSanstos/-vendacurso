@@ -79,9 +79,10 @@ class InputController extends Controller
             $strPsswd = encrypPassBr(ltrim($request->input("passsnh")));
             $intExiste = usuariosModel::select(DB::RAW("count(*) as existe"))->where("email", $StrEmail)
             ->where("passwd_snh", $strPsswd)->where("active", true)->pluck("existe")[0];
+            print_r($intExiste);
+            exit;
             if ( $intExiste == 1)
                 {
-                    echo  "pode logar";
                     $_SESSION["usermail"]=$StrEmail;
                     return redirect("/");
                 } else {
