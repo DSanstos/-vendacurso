@@ -20,7 +20,7 @@ Route::get('/', function () {
         {
             return view("bootstrap.logued");
         } else {
-            return view('bootstrap.landing2');
+            return view('bootstrap.Landing2');
         }
     
 });
