@@ -65,10 +65,14 @@ Route::get("login", function(){
     return view("bootstrap.login");
 });
 Route::post("uppass", [App\Http\Controllers\InputController::class, "UpdatePassword"]);
+Route::get('promocao', function(){
+    return view("bootstrap.promo");
+});
 //rotas de teste
 Route::get("new", function(){
     return view("bootstrap.landingpage");
 });
+
 Route::get("teste", function(){
     return view("bootstrap.obrigado")->with(["linkId"=>"#"]);
 });

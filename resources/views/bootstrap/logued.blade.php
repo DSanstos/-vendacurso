@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
 $today = Carbon::parse(date('Y-m-d'));
-$endate = carbon::parse('2023-01-02');
+$endate = carbon::parse('2023-01-07');
 @endphp
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +30,7 @@ $endate = carbon::parse('2023-01-02');
           </li>
           @if($endate->greaterThan($today))
           <li class="nav-item">
-            <a class="nav-link" href="#">Promoção</a>
+            <a class="nav-link" href="/promocao">Promoção</a>
           </li>
           @endif
         </ul>
