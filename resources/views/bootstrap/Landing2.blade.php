@@ -22,27 +22,29 @@ use App\Models\LinksPagModel;
     <meta name="description" content="Única turma que haverá em 2023. Não perca essa chance de transforma-se também num ninja em Laravel">
 
     <!-- Facebook Meta Tags -->
+    <meta name="msapplication-TileImage" content="https://laravelfullstack.com.br/public/mestre_laravel.jpg"> 
+    <meta property="og:title" content="Aprenda com os mestres do Laravel">
     <meta property="og:url" content="https://laravelfullstack.com.br/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Aprenda Com os Mestres do Laravel">
-    <meta property="og:description" content="Única turma que haverá em 2023. Não perca essa chance de transforma-se também num ninja em Laravel">
-    <meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/000de615-1fc1-4da1-9e96-2a0c86ae20c4.jpg?token=xjOQXHRsOluSTrcBtFBOBNEn7GA9hEuNWuo6G3RneTk&height=600&width=400&expires=33247915280">
+    
+    <meta property="og:description" content="Única turma que haverá em 2024. Não perca essa chance de transforma-se também num ninja em Laravel">
+    <meta property="og:image" content="https://laravelfullstack.com.br/public/mestre_laravel.jpg">
 
     <meta property="og:site_name" content="Laravel Fullstack - new">
     <meta property="og:title" content="Nosso yoyulo fullstatck">
     <meta property="og:description" content="a melhor descrição">
-    <meta property="og:image" content="https://laravelfullstack.com.br/public/mestre_laravel.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
+    <meta property="og:image:url" content="https://laravelfullstack.com.br/public/mestre_laravel.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="laravelfullstack.com.br">
     <meta property="twitter:url" content="https://laravelfullstack.com.br/">
-    <meta name="twitter:title" content="Aprenda Com os Mestres do Laravel">
-    <meta name="twitter:description" content="Única turma que haverá em 2023. Não perca essa chance de transforma-se também num ninja em Laravel">
-    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/000de615-1fc1-4da1-9e96-2a0c86ae20c4.jpg?token=xjOQXHRsOluSTrcBtFBOBNEn7GA9hEuNWuo6G3RneTk&height=600&width=400&expires=33247915280">
+    <meta name="twitter:title" content="Aprenda com os mestres do Laravel">
+    <meta name="twitter:description" content="Única turma que haverá em 2024. Não perca essa chance de transforma-se também num ninja em Laravel">
+    <meta name="twitter:image" content="https://laravelfullstack.com.br/public/mestre_laravel.jpg">
 <!-- -->
     <title>{{$sitename}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
