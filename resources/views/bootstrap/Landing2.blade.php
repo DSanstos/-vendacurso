@@ -2,14 +2,14 @@
 $sitename = "Laravel FullStack ";
 use App\Models\usuariosModel;
 use App\Models\LinksPagModel;
-$reservas = usuariosModel::count();
-$inscritos = LinksPagModel::where("pago", true)->count();
+// $reservas = usuariosModel::count();
+// $inscritos = LinksPagModel::where("pago", true)->count();
 //$inscritos = 1; //remover ou comentar
-if($inscritos > 40){
-        $classBadge = "danger";
-    } else {
-        $classBadge = "success";
-    };
+// if($inscritos > 40){
+//         $classBadge = "danger";
+//     } else {
+//         $classBadge = "success";
+//     };
 @endphp
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,22 +38,22 @@ if($inscritos > 40){
                 <img src="/public/laravel_icon512.png" alt="Laravel Logo" height="65">{{strtoupper($sitename)}}
               </a>
               <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                @if($inscritos != 0)
+                {{-- @if($inscritos != 0)
                     <li>
                     <a href="#" class="nav-link text-white text-center">
                         <span class="fa fa-user-circle fa-3x"></span><br/>
                         Inscritos <span class="badge text-bg-{{$classBadge}}">{{$inscritos}}</span>
                     </a>
                     </li>
-                @endif
-                @if($reservas != 0)
+                @endif --}}
+                {{-- @if($reservas != 0)
                     <li>
                     <a href="#" class="nav-link text-white text-center">
                         <span class="fa fa-users fa-3x"></span><br/>
                         Reservas <span class="badge text-bg-danger">{{$reservas}}</span>
                     </a>
                     </li>
-                @endif
+                @endif --}}
                 <li>
                   <a href="/beneficios" class="nav-link text-white text-center">
                     <span class="fa fa-star-o fa-3x"></span><br/>
