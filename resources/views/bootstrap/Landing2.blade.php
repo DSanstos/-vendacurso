@@ -35,7 +35,7 @@ if($inscritos > 40){
           <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
               <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <img src="laravel_icon512.png" alt="Laravel Logo" height="65">{{strtoupper($sitename)}}
+                <img src="/public/laravel_icon512.png" alt="Laravel Logo" height="65">{{strtoupper($sitename)}}
               </a>
               <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 @if($inscritos != 0)
@@ -86,7 +86,7 @@ if($inscritos > 40){
       <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="mestre_laravel.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="600" loading="lazy">
+            <img src="/public/mestre_laravel.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="600" loading="lazy">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">Torne-se um dos Mestres do Laravel</h1>
